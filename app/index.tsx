@@ -110,8 +110,8 @@ export default function Index() {
 
         <View style={{ gap: 10 }}>
           <Button>
-            <Link href="/">
-              Next
+            <Link href="/screens/auth/login">
+              Get started
             </Link>
           </Button>
           <View style={{ padding: 10 }}>
