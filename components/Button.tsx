@@ -2,7 +2,8 @@ import React, { ReactNode } from 'react'
 import { Pressable, StyleSheet, Text } from 'react-native'
 
 interface buttonProps {
-  children: ReactNode
+  children: ReactNode,
+  icon?: ReactNode
 }
 
 const styles = StyleSheet.create({
@@ -11,21 +12,27 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 12,
     width: 332,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   text: {
     color: '#fff',
     fontWeight: 'bold',
     textAlign: 'center',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    marginRight: 10
   }
 })
 
-const Button = ({ children }: buttonProps) => {
+const Button = ({ children, icon = <></> }: buttonProps) => {
   return (
     <Pressable style={styles.button}>
       <Text style={styles.text}>
         {children}
       </Text>
+      {icon}
     </Pressable>
   )
 }
