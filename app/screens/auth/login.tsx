@@ -54,7 +54,9 @@ const Login = () => {
       </View>
 
       <Button>
-        Log in
+        <Link href="/screens/permissions/location">
+          Log in
+        </Link>
       </Button>
 
       <Text style={{ textAlign: 'center', marginTop: 10 }}>
