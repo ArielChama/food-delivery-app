@@ -7,7 +7,7 @@ interface ContainerProps {
 
 const Container = ({ children }: ContainerProps) => {
   return (
-    <View style={{ padding: 20, backgroundColor: "#ffff", paddingTop: 200, height: '100%' }}>
+    <View style={{ padding: 20, backgroundColor: "#ffff", height: '100%', paddingTop: 80 }}>
       {children}
     </View>
   )

@@ -1,8 +1,9 @@
 import React from 'react'
 import Container from '@/components/Container'
-import { Image, StyleSheet, Text } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import Button from '@/components/Button'
 import MapPin from '@/components/icons/MapPin'
+import { Link } from 'expo-router'
 
 
 const styles = StyleSheet.create({
@@ -23,14 +24,19 @@ const styles = StyleSheet.create({
 const Location = () => {
   return (
     <Container>
+      <View style={{ paddingTop: 120 }}>
       <Image style={styles.image} source={require('@/assets/images/undraw_Current_location.png')} />
       <Button icon={<MapPin />}>
-        Acess Location
+        <Link href="/screens/Home">
+          Acess Location
+        </Link>
       </Button>
 
       <Text style={styles.info}>
         We will acess your current location only while using the app
-      </Text>
+      </Text>  
+      </View>
+      
     </Container>
   )
 }
